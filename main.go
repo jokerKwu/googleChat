@@ -4,7 +4,7 @@ import (
 	"github.com/labstack/echo/v4"
 	echoSwagger "github.com/swaggo/echo-swagger"
 	swaggerDocs "main/docs"
-	paymentChatHandler "main/googleChat/delivery/handler"
+	paymentChatHandler "main/googleChat/payment/handler"
 )
 
 func main() {

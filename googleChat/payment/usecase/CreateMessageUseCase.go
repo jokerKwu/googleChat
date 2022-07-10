@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"main/googleChat/delivery/model/domain"
-	"main/googleChat/delivery/model/request"
-	_interface "main/googleChat/delivery/usecase/interface"
+	"main/googleChat/payment/model/domain"
+	"main/googleChat/payment/model/request"
+	_interface "main/googleChat/payment/usecase/interface"
 	"net/http"
 )
 
@@ -21,7 +21,7 @@ func NewCreateMessageUseCase() _interface.ICreateMessageUseCase {
 func (c *CreateMessageUseCase) CreateMessage(reqData *request.ReqCreateMessage) error {
 
 	webhookURL := "https://chat.googleapis.com/v1/spaces/AAAAfp69B9E/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=5EIAjyug0v-plihlE-wZdcGrpNyyhJ8nMLRdmK84g_w%3D"
-	data := domain.GoogleChat{Text: "hello"}
+	data := domain.GoogleChat{Text: reqData.Message}
 	var buf bytes.Buffer
 	err := json.NewEncoder(&buf).Encode(data)
 	if err != nil {

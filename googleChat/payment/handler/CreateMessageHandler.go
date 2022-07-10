@@ -3,9 +3,9 @@ package handler
 import (
 	"github.com/go-playground/validator"
 	"github.com/labstack/echo/v4"
-	"main/googleChat/delivery/model/request"
-	"main/googleChat/delivery/usecase"
-	_interface "main/googleChat/delivery/usecase/interface"
+	"main/googleChat/payment/model/request"
+	"main/googleChat/payment/usecase"
+	_interface "main/googleChat/payment/usecase/interface"
 	"net/http"
 )
 

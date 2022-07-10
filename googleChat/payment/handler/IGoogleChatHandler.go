@@ -1,7 +1,7 @@
 package handler
 
 import (
-	_interface "main/googleChat/delivery/usecase/interface"
+	_interface "main/googleChat/payment/usecase/interface"
 )
 
 type ICreateMessageHandler interface {
